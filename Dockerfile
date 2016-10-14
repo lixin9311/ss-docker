@@ -22,7 +22,7 @@ RUN ./configure \
 RUN mv ./docker/ubuntu/entrypoint /entrypoint
 # Tear down building environment and delete git repository
 WORKDIR /
-RUN rm -rf $BASEDIR
+RUN rm -rf $BASEDIR \
  && apt-get --purge autoremove -y $DEPENDENCIES
 
 # Port in the config file won't take affect. Instead we'll use 8388.
