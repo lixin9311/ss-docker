@@ -30,5 +30,4 @@ EXPOSE $SERVER_PORT
 EXPOSE $SERVER_PORT/udp
 
 # Override the host and port in the config file.
-ADD entrypoint /
 ENTRYPOINT ["ss-server"]
